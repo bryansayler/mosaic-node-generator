@@ -7,6 +7,11 @@ A Node module to generate mosaic images.
 
 [<img src="https://github.com/Dellos7/mosaic-node-generator-example/blob/master/outputs/output_rc-100_30x30.jpg" width="300" />](https://github.com/Dellos7/mosaic-node-generator-example/blob/master/outputs/output_rc-100_30x30.jpg)
 
+
+## Generative AI mosaic vision
+
+A modern version of this project could generate people-centric tile images on demand instead of relying only on a static tile folder. See [Generative AI Mosaic Vision](docs/generative-ai-mosaic-vision.md) for a proposed product direction, architecture, safeguards, and roadmap.
+
 ## Installation
 
 You must have [Node.js](https://nodejs.org/es/) installed in your system.
