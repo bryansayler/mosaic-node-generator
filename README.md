@@ -21,6 +21,25 @@ Using **npm**:
 npm install mosaic-node-generator --save
 ```
 
+## ChatGPT and Codex development environment
+
+This repository includes durable agent guidance in [`AGENTS.md`](AGENTS.md) and a repeatable setup script for hosted coding environments.
+
+When creating a ChatGPT/Codex environment for this repository:
+
+1. Connect the environment to the GitHub repository.
+2. Select an image with Node.js and npm installed.
+3. Use the following setup command:
+
+   ```sh
+   ./scripts/setup-environment.sh
+   ```
+
+4. Leave secrets out of the setup script and repository. Add any future credentials through the environment's encrypted secrets settings instead.
+5. Allow the setup step network access so `npm ci` can install the dependencies pinned in `package-lock.json`.
+
+The setup script checks for Node.js and npm, installs the locked dependencies, and compiles the TypeScript sources. Agents should read `AGENTS.md` before changing the project and run the validation commands documented there before submitting work.
+
 ## Example
 
 Example: [mosaic-node-generator-example](https://github.com/Dellos7/mosaic-node-generator-example)
