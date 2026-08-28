@@ -12,6 +12,27 @@ A Node module to generate mosaic images.
 
 A modern version of this project could generate people-centric tile images on demand instead of relying only on a static tile folder. See [Generative AI Mosaic Vision](docs/generative-ai-mosaic-vision.md) for a proposed product direction, architecture, safeguards, and roadmap.
 
+### Open-source integration catalog
+
+The machine-readable [integration catalog](integrations/catalog.json) maps generation engines, vision and semantic scoring, retrieval, safety, provenance, storage, orchestration, policy, observability, identity, and supply-chain tooling to their possible pipeline roles. Its `tier` describes whether the **capability** is critical; alternatives in the same role are not all required in a production deployment. Entries marked `review` have licensing or operational caveats that must be resolved before use.
+
+Explore it as a sortable, searchable, filterable table:
+
+```sh
+npm run integrations:catalog
+# open http://localhost:8080/docs/integration-catalog.html
+```
+
+Preview or shallow-clone the upstream repositories into the ignored `.integrations/` workspace:
+
+```sh
+npm run integrations:list
+npm run integrations:install:critical
+npm run integrations:install
+```
+
+Cloning does not execute, build, configure, or endorse upstream code. Pin reviewed commits, scan dependencies and containers, verify model licenses separately, and deploy only the integrations selected in an architecture review. The installer is idempotent for existing directories and accepts `--destination=PATH`.
+
 ## Installation
 
 You must have [Node.js](https://nodejs.org/es/) installed in your system.
